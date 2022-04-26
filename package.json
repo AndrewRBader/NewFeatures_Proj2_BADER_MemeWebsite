@@ -1,0 +1,24 @@
+{
+  "name": "remote_project2_memewebsite",
+  "version": "1.0.0",
+  "description": "Remote repot project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewRBader/SEI_Project2_MemeWebsite_RemoteRepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewRBader/SEI_Project2_MemeWebsite_RemoteRepo/issues"
+  },
+  "homepage": "https://github.com/AndrewRBader/SEI_Project2_MemeWebsite_RemoteRepo#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}

@@ -77,3 +77,4 @@ Different elements of meme schema wireframe
 Meme schema code:
 
 ![meme_schema_code text](./imagesWireframe/meme_schema_code.png)
+
