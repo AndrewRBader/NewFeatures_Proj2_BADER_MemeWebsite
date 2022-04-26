@@ -51,5 +51,8 @@ Different elements in discussion home page
 - list of discussions to show pages of discussions
 - click on discussions to see show page of each discussion
 
+discussion show page wireframe:
+
+
 
 
