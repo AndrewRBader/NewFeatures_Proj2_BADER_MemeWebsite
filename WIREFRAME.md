@@ -53,6 +53,7 @@ Different elements in discussion home page
 
 discussion show page wireframe:
 
+![memeDiscussion_show_wireframe text](./imagesWireframe/memeDiscussion_show_wireframe.png)
 
 
 
