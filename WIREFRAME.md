@@ -17,6 +17,7 @@ Other options:
 4) collaborative memes
 
 Home Page Wireframe:
+
 ![homepage_wireframe text](./imagesWireframe/homepage_wireframe.png)
 
 
