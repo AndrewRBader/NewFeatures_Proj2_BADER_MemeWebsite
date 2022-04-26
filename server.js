@@ -5,12 +5,15 @@ const app = express();
 // set up port variable
 PORT = 4000;
 
-
+//models//
+// test Meme model to get initial routes working
+const memes = require('./models/Meme');
 
 //routes//
 // show get route
 app.get('/:id', (req, res) =>{
-    res.send('this is my show route');
+    let memeId = req.params.id;
+    res.send(memes[memeId]);
 })
 
 // home get route
