@@ -55,5 +55,13 @@ discussion show page wireframe:
 
 ![memeDiscussion_show_wireframe text](./imagesWireframe/memeDiscussion_show_wireframe.png)
 
+Different elements in meme discussion show page
+- back to home button
+- back to discussion homepage button
+- create newe discussion post page
+- Discussion Title
+- posts with memes and edit/delete buttons
+
+
 
 
