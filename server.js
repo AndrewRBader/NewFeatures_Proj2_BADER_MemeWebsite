@@ -8,6 +8,11 @@ PORT = 4000;
 
 
 //routes//
+// show get route
+app.get('/:id', (req, res) =>{
+    res.send('this is my show route');
+})
+
 // home get route
 app.get('/', (req, res) => {
     res.send('Welcome to We Meme It');
