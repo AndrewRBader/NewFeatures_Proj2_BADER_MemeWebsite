@@ -27,6 +27,8 @@ Different elements in home page
 - Submit New Meme Button: goes to new ejs page
 - Can click on new meme feed items to get to their show pages
 
+Meme Show Page Wireframe:
 
+![meme_showpage_wireframe text](./imagesWireframe/meme_showpage_wireframe.png)
 
 
