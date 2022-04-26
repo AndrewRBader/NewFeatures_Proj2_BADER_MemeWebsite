@@ -74,3 +74,6 @@ Different elements of meme schema wireframe
 - comments (the many)
 - the relationship is 1 meme to many comments
 
+Meme schema code:
+
+![meme_schema_code text](./imagesWireframe/meme_schema_code.png)
