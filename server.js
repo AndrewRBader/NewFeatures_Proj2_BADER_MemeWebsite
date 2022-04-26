@@ -19,7 +19,8 @@ app.set('view engine', 'ejs');
 // show get route
 app.get('/:id', (req, res) =>{
     let memeId = req.params.id;
-    res.send(memes[memeId]);
+    const context = {oneMeme: memes[memeId]}
+    res.render('show.ejs', context);
 })
 
 // home get route
