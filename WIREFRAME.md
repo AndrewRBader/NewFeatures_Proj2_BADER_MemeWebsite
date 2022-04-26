@@ -16,6 +16,7 @@ Other options:
 3) discussion page memes
 4) collaborative memes
 
-Home Page
+Home Page Wireframe:
+
 
 
