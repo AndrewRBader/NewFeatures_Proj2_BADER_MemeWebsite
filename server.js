@@ -37,7 +37,7 @@ app.get('/meme/:id', (req, res) =>{
 });
 
 // edit route
-app.get('/:id/edit', (req,res) => {
+app.get('/meme/:id/edit', (req,res) => {
     const editMeme = memes[req.params.id];
     const context = {editMeme: editMeme, id: req.params.id}
     res.render('edit.ejs', context);
@@ -45,26 +45,26 @@ app.get('/:id/edit', (req,res) => {
 
 // home index route redirects to home route
 app.get('/meme/', (req, res) => {
-    res.redirect('/');
-});
-
-// home get route
-app.get('/', (req, res) => {
     const context = {memes:memes};
     res.render('index.ejs', context);
 });
 
+// home get route
+app.get('/', (req, res) => {
+    res.send('Welcome to we meme it homepage');
+});
+
 // "create" post route
-app.post('/', (req,res) => {
+app.post('/meme/', (req,res) => {
     memes.push (req.body);
-    res.redirect('/');
+    res.redirect('/meme/');
 });
 
 // delete/destroy route
 app.delete('/meme/:id', (req,res) => {
     //need to change for backend
     memes.splice(req.params.id, 1)
-    res.redirect('/');
+    res.redirect('/meme/');
 })
 
 // update put route
