@@ -1,9 +1,13 @@
 // require npm express library 
 const express = require('express');
-// require method override library
-const methodOverride = require('method-override');
+
 // set up instance of express
 const app = express();
+
+// require method override library
+const methodOverride = require('method-override');
+
+
 // set up port variable
 PORT = 4000;
 
@@ -14,8 +18,10 @@ const memes = require('./models/Meme');
 //middleware//
 //express static to find public folder/static css
 app.use(express.static('public'));
+
 // DELETE/UPDATE middle ware
 app.use(methodOverride('_method'));
+
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
 //application view engine to render ejs
@@ -34,6 +40,11 @@ app.get('/meme/:id', (req, res) =>{
     res.render('show.ejs', context);
 });
 
+// home index route redirects to home route
+app.get('/meme/', (req, res) => {
+    res.redirect('/');
+});
+
 // home get route
 app.get('/', (req, res) => {
     const context = {memes:memes};
@@ -46,12 +57,11 @@ app.post('/', (req,res) => {
     res.redirect('/');
 });
 
-// delete-destroy route - POST route
-app.delete('/meme/:id', (req, res) => {
-    //need to change when add backend
-    memes.splice(req.params.id, 1);
+// delete/destroy route
+app.delete('/meme/:id', (req,res) => {
+    memes.splice(req.params.id, 1)
     res.redirect('/');
-});
+})
 
 // app.listen to server at given port
 app.listen(PORT, () => {
