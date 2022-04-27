@@ -36,6 +36,13 @@ app.get('/meme/:id', (req, res) =>{
     res.render('show.ejs', context);
 });
 
+// edit route
+app.get('/:id/edit', (req,res) => {
+    const editMeme = memes[req.params.id];
+    const context = {editMeme: editMeme, id: req.params.id}
+    res.render('edit.ejs', context);
+})
+
 // home index route redirects to home route
 app.get('/meme/', (req, res) => {
     res.redirect('/');
