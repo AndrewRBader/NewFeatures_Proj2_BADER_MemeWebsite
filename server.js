@@ -32,7 +32,7 @@ app.get('/meme/new', (req, res) => {
 // show get route
 app.get('/meme/:id', (req, res) =>{
     const memeId = req.params.id;
-    const context = {oneMeme: memes[memeId]}
+    const context = {oneMeme: memes[memeId], id: req.params.id};
     res.render('show.ejs', context);
 });
 

@@ -7,6 +7,9 @@
     <nav class="home">
         <a href = "/">Back to Home</a>
     </nav>
+    <div>
+        <a href="/<%=id%>/edit"> Edit <%= oneMeme.title %></a>
+    </div>
     <h2><%= oneMeme.title %></h2>
     <img class = 'showImage' src = '<%=oneMeme.image%>' alt = '<%=oneMeme.title%>'/>
     <p><%= oneMeme.description %></p>
