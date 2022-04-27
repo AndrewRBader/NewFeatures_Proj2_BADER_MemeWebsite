@@ -4,8 +4,6 @@ const express = require('express');
 const app = express();
 // require method override library
 const methodOverride = require('method-override');
-
-
 // set up port variable
 PORT = 4000;
 
@@ -43,7 +41,7 @@ app.get('/meme/:id/edit', (req,res) => {
     res.render('edit.ejs', context);
 })
 
-// home index route redirects to home route
+// home index route 
 app.get('/meme/', (req, res) => {
     const context = {memes:memes};
     res.render('index.ejs', context);
@@ -63,15 +61,15 @@ app.post('/meme/', (req,res) => {
 // delete/destroy route
 app.delete('/meme/:id', (req,res) => {
     //need to change for backend
-    memes.splice(req.params.id, 1)
+    memes.splice(req.params.id, 1);
     res.redirect('/meme/');
-})
+});
 
 // update put route
 app.put('/meme/:id', (req, res) => {
     memes[req.params.id] = req.body;
-    res.redirect(`/meme/${req.params.id}`)
-})
+    res.redirect(`/meme/${req.params.id}`);
+});
 
 // app.listen to server at given port
 app.listen(PORT, () => {
