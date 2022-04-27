@@ -1,5 +1,7 @@
 // require npm express library 
 const express = require('express');
+// require method override library
+const methodOverride = require('method-override');
 // set up instance of express
 const app = express();
 // set up port variable
@@ -12,6 +14,8 @@ const memes = require('./models/Meme');
 //middleware//
 //express static to find public folder/static css
 app.use(express.static('public'));
+// DELETE/UPDATE middle ware
+app.use(methodOverride('_method'));
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
 //application view engine to render ejs
