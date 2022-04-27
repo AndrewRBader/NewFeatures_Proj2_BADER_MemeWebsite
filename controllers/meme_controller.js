@@ -48,7 +48,7 @@ router.delete('/:id', (req,res) => {
     res.redirect('/meme/');
 });
 
-// update put route
+// update put route -> http://localhost:4000/meme/:id
 router.put('/:id', (req, res) => {
     memes[req.params.id] = req.body;
     res.redirect(`/meme/${req.params.id}`);
