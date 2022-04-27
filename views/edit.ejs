@@ -3,9 +3,9 @@
     <!-- include partial head.ejs here -->
     <%- include('partials/head.ejs') %>
 <body>
+     <!-- navigation -->
+     <%- include('partials/nav.ejs') %>
     <h1>Edit Meme Page</h1>
-    <!-- navigation -->
-    <%- include('partials/nav.ejs') %>
     <form method = "POST" action = "/meme/<%= id %>?_method=PUT">
         <div>
             <label for = "title">Meme Title: </label>
