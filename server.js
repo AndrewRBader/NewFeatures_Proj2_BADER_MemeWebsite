@@ -42,6 +42,11 @@ app.post('/', (req,res) => {
     res.redirect('/');
 });
 
+// delete-destroy route - POST route
+app.delete('/meme/:id', (req, res) => {
+    res.send('testing delete');
+});
+
 // app.listen to server at given port
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
