@@ -42,9 +42,17 @@ router.get('/:id/edit', (req,res) => {
 });
 
 // "create" post route -> http://localhost:4000/meme/
-router.post('/', (req,res) => {
-    memes.push (req.body);
-    res.redirect('/meme/');
+router.post('/', async (req,res, next) => {
+    try {
+        console.log(req.body);
+        const createMeme = await db.Meme.create(req.body);
+        console.log(`created meme: ${createMeme}`);
+        res.redirect('/meme/');
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // delete/destroy route -> http://localhost:4000/meme/:id
