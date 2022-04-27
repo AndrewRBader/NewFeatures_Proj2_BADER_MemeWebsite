@@ -67,6 +67,12 @@ app.delete('/meme/:id', (req,res) => {
     res.redirect('/');
 })
 
+// update put route
+app.put('/meme/:id', (req, res) => {
+    memes[req.params.id] = req.body;
+    res.redirect(`/meme/${req.params.id}`)
+})
+
 // app.listen to server at given port
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);

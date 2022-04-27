@@ -4,7 +4,7 @@
     <%- include('partials/head.ejs') %>
 <body>
     <h1>Edit Meme Page</h1>
-    <form>
+    <form method = "POST" action = "/meme/<%= id %>?_method=PUT">
         <div>
             <label for = "title">Meme Title: </label>
             <input name = "title" type = "text"/>
@@ -17,7 +17,7 @@
             <label for = "description">Meme Description: </label>
             <input name = "description" type = "text"/>
         </div>
-        <input type = "submit" value = "Submit New Meme" />
+        <input type = "submit" value = "Edit Meme" />
     </form>
 </body>
 </html>
