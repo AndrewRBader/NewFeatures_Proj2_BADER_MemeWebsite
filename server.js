@@ -44,7 +44,9 @@ app.post('/', (req,res) => {
 
 // delete-destroy route - POST route
 app.delete('/meme/:id', (req, res) => {
-    res.send('testing delete');
+    //need to change when add backend
+    memes.splice(req.params.id, 1);
+    res.redirect('/');
 });
 
 // app.listen to server at given port
