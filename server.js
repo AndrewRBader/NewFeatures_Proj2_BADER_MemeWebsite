@@ -4,6 +4,10 @@ const express = require('express');
 const app = express();
 // require method override library
 const methodOverride = require('method-override');
+
+// import meme_controller
+const memeController = require('./controllers/meme_controller.js');
+
 // set up port variable
 PORT = 4000;
 
@@ -18,6 +22,10 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
+
+// meme controller middleware
+app.use('/meme/', memeController);
+
 //application view engine to render ejs
 app.set('view engine', 'ejs');
 
