@@ -1,9 +1,7 @@
 // require npm express library 
 const express = require('express');
-
 // set up instance of express
 const app = express();
-
 // require method override library
 const methodOverride = require('method-override');
 
@@ -18,10 +16,8 @@ const memes = require('./models/Meme');
 //middleware//
 //express static to find public folder/static css
 app.use(express.static('public'));
-
 // DELETE/UPDATE middle ware
 app.use(methodOverride('_method'));
-
 // body parser middleware
 app.use(express.urlencoded({extended:false}));
 //application view engine to render ejs
@@ -59,6 +55,7 @@ app.post('/', (req,res) => {
 
 // delete/destroy route
 app.delete('/meme/:id', (req,res) => {
+    //need to change for backend
     memes.splice(req.params.id, 1)
     res.redirect('/');
 })
