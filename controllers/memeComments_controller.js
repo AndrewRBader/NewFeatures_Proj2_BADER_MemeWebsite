@@ -58,8 +58,8 @@ router.post('/', async(req, res, next) => {
 // Show route -GET- route for comments ERD, serves show.ejs template
 router.get('/:memeId', async(req, res, next) => {
     try{
-        const foundMeme = await db.MemeComment.findById(req.params.memeId);
-        res.send(foundMeme);
+        const foundMemeComment = await db.MemeComment.findById(req.params.memeId).populate('meme');
+        res.send(foundMemeComment);
     }
     catch (error){
         console.log(error);
