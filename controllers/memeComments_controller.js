@@ -15,7 +15,15 @@ const db = require('../Models/');
 
 // Index -GET- route for comments ERD, serves index.ejs template
 router.get('/', async(req, res, next) => {
-    return res.send('hitting meme comment index');
+    try{
+        const allMemeComments = await db.MemeComment.find({});
+        res.send(allMemeComments);
+    }
+    catch (error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // New -GET- route for comments ERD, serves new.ejs template
@@ -38,7 +46,7 @@ router.post('/', async(req, res, next) => {
         const newMemeCommentData = req.body;
         const newMemeComment = await db.MemeComment.create(newMemeCommentData);
         console.log(newMemeComment);
-        res.redirect('/comments/');
+        return res.redirect('/comments/');
     } 
     catch (error) {
         console.log(error);
