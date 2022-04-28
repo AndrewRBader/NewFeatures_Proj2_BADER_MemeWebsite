@@ -34,7 +34,17 @@ router.get('/new', async(req, res, next) => {
 
 // Create -POST- route for comments ERD
 router.post('/', async(req, res, next) => {
-    return res.send(req.body);
+    try {
+        const newMemeCommentData = req.body;
+        const newMemeComment = await db.MemeComment.create(newMemeCommentData);
+        console.log(newMemeComment);
+        res.redirect('/comments/');
+    } 
+    catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 });
 
 // Show route -GET- route for comments ERD, serves show.ejs template
