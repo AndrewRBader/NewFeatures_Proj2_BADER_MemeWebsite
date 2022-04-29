@@ -19,6 +19,10 @@ imageInput.setAttribute('text', imageInputDefaultText)
 let URLtext = imageInput.getAttribute('text')
 console.log(URLtext)
 
+imageInput.addEventListener('change', ()=>{
+    console.log('you changed the URL')
+})
+
 function updateMemeCanvas(canvas, image, topText, bottomText) {
     console.log(canvas);
     console.log(image);
