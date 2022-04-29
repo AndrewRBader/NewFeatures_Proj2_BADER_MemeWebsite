@@ -23,12 +23,18 @@ imageInput.addEventListener('change', ()=>{
     // event listener (ie set inverval) to wait for loading then calls updateMemeCanvas function
     image.addEventListener("load", () => {
         updateMemeCanvas(canvas, image, topTextInput.value, bottomTextInput.value);
-    });
+    },
+    // just load once, don't need to continuously check for loading
+    {once:true});
 });
 
 function updateMemeCanvas(canvas, image, topText, bottomText) {
-    console.log(canvas);
-    console.log(image);
-    console.log(topText);
-    console.log(bottomText);
+    const context = canvas.getContext('2d');
+    const width = image.width;
+    const height = image.height;
+
+    // Update canvas background
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(image, 0, 0);
 };
