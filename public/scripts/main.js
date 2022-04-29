@@ -13,14 +13,9 @@ const canvas = document.querySelector('#meme')
 // image variable gets updated every time user selects new image
 let image = null;
 
-console.log(imageInput);
-const imageInputDefaultText = 'put image URL here'
-imageInput.setAttribute('text', imageInputDefaultText)
-let URLtext = imageInput.getAttribute('text')
-console.log(URLtext)
-
 imageInput.addEventListener('change', ()=>{
-    console.log('you changed the URL')
+    const imgURL = imageInput.value
+    console.log(imgURL)
 })
 
 function updateMemeCanvas(canvas, image, topText, bottomText) {
