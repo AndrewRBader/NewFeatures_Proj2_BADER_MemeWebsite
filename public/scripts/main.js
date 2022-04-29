@@ -54,6 +54,8 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     context.lineWidth = Math.floor(fontSize / 4);
     // text fill style
     context.fillStyle = "white";
+    // align text in the center
+    context.textAlign = "center";
     // no weird anomolies in text
     context.lineJoin = "round";
     // adaptable context
@@ -62,8 +64,16 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     // adding the top text
     // text adheres to yOffset
     context.textBaseline = "top";
-    // setting top text positon to halfway vs yOffset value
-    context.strokeText(topText, width / 8, yOffset);
-    context.fillText(topText, width / 8, yOffset);
+    // setting top text positon to halfway vs yOffset value (/ 8 seemed best)
+    context.strokeText(topText, width / 2, yOffset);
+    // setting up white fill to halfway-ish vs yOffset value (/ 8 seemed best)
+    context.fillText(topText, width / 2, yOffset);
 
+    // adding the bottom text
+    // text adheres to yOffset
+    context.textBaseline = "bottom";
+    // setting top text positon to halfway vs yOffset value (/ 8 seemed best)
+    context.strokeText(bottomText, width / 2, height - yOffset);
+    // setting up white fill to halfway-ish vs yOffset value (/ 8 seemed best)
+    context.fillText(bottomText, width / 2, height - yOffset);
 };
