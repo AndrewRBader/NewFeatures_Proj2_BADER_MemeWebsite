@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Meme</title>
     <link rel="stylesheet" href="/styles/newMeme.css"/>
+    <!-- linking jQuery files -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
     <script src = "/scripts/main.js" defer></script>
 </head>
 <body>
@@ -19,6 +25,7 @@
         <input type = "text" id = "topTextInput"/>
         <label> Bottom Text </label>
         <input type = "text" id = "bottomTextInput"/>
+        <input type = "submit" id = "generate_meme_button" value="Generate Meme!!"/> 
 
         <!-- JS puts generated meme image into this canvas -->
         <canvas id ="meme"></canvas>

@@ -8,24 +8,24 @@ const imageInput = document.querySelector('#imageURL');
 const topTextInput = document.querySelector('#topTextInput');
 const bottomTextInput = document.querySelector('#bottomTextInput');
 // grabbing canvas, generated image
-const canvas = document.querySelector('#meme')
+const canvas = document.querySelector('#meme');
+// jquery grabbing button for click event function
+const $generateMemeButton = $('#generate_meme_button');
 
 // image variable gets updated every time user selects new image
 let image = null;
 
+// on click of generate meme button, carry out generation of new meme
 imageInput.addEventListener('change', ()=>{
     // collecting the image URL variable
     const imgURL = imageInput.value
-    console.log(imgURL)
     // set new image here and set the src to inputed imgURL
     image = new Image();
     image.src = imgURL;
-    // event listener (ie set inverval) to wait for loading then calls updateMemeCanvas function
-    image.addEventListener("load", () => {
+    // when click generate meme button you see the meme below
+    $generateMemeButton.click(() => {
         updateMemeCanvas(canvas, image, topTextInput.value, bottomTextInput.value);
-    },
-    // just load once, don't need to continuously check for loading
-    {once:true});
+    })
 });
 
 function updateMemeCanvas(canvas, image, topText, bottomText) {
@@ -64,16 +64,16 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     // adding the top text
     // text adheres to yOffset
     context.textBaseline = "top";
-    // setting top text positon to halfway vs yOffset value (/ 8 seemed best)
+    // setting top text positon to halfway vs yOffset value
     context.strokeText(topText, width / 2, yOffset);
-    // setting up white fill to halfway-ish vs yOffset value (/ 8 seemed best)
+    // setting up white fill to halfway-ish vs yOffset value
     context.fillText(topText, width / 2, yOffset);
 
     // adding the bottom text
     // text adheres to yOffset
     context.textBaseline = "bottom";
-    // setting top text positon to halfway vs yOffset value (/ 8 seemed best)
+    // setting top text positon to halfway vs yOffset value
     context.strokeText(bottomText, width / 2, height - yOffset);
-    // setting up white fill to halfway-ish vs yOffset value (/ 8 seemed best)
+    // setting up white fill to halfway-ish vs yOffset value
     context.fillText(bottomText, width / 2, height - yOffset);
 };
