@@ -1,11 +1,10 @@
-Remote repot project 2
+Remote repot project 2 past mvp by Andrew Bader
 
-- with collaborative meme feature
-- API added
-
-note database for project remote repo notes:
-Project Remote Meme Site Project 2 Repo
-mongoDB.com
-
+- will add memes at the beginning of the index
+- refactored index and show of memes for better flow
+- will have new generate meme feature that adds to meme index (feed)
+- will have edit selected meme and repost to meme index (feed)
+- need save as function/delete for those who dont want to post to feed (index)
+- have apis in different categories for inspirational memes
 
 
