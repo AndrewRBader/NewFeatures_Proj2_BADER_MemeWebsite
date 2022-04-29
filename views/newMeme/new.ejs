@@ -26,9 +26,11 @@
         <label> Bottom Text </label>
         <input type = "text" id = "bottomTextInput"/>
         <input type = "submit" id = "generate_meme_button" value="Generate Meme!!"/> 
-
-        <!-- JS puts generated meme image into this canvas -->
-        <canvas id ="meme"></canvas>
+        <form method = "POST" action = "/meme/" >
+            <!-- JS puts generated meme image into this canvas -->
+            <canvas id ="meme"></canvas>
+            <input type = "submit" value = "Submit New Meme"/>
+        </form>
     </div>
 </body>
 </html>

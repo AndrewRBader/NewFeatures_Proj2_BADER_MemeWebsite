@@ -1,5 +1,6 @@
 // export all of the models
 module.exports = {
     Meme: require('./Meme.js'),
-    MemeComment: require('./MemeComment')
+    MemeComment: require('./MemeComment'),
+    GeneratedMeme: require('./GeneratedMeme')
 };
