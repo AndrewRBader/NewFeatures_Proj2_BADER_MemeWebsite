@@ -12,7 +12,7 @@ const memeSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        required: [true, 'please input image URL']
+        required: [true, 'please put image URL']
     },
     description: {
         type: String,

@@ -76,5 +76,5 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     context.strokeText(bottomText, width / 2, height - yOffset);
     // setting up white fill to halfway-ish vs yOffset value
     context.fillText(bottomText, width / 2, height - yOffset);
-
+    //return url for canvas
 };
