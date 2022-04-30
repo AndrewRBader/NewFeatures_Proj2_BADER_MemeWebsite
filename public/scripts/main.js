@@ -1,5 +1,3 @@
-console.log('hello front end')
-
 // Adapted from: new meme generator decode example
 // link: https://www.youtube.com/watch?v=io5FcMAdLy
 
